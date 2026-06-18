@@ -5,8 +5,11 @@ import type { CampsiteConfig } from "../types";
  * Quelle: leads/campingedengarten/raw/digest. BILDARM: auf der Festplatte liegen nur ZWEI
  * herkunftssichere Eigenfotos (Platzansicht + Tauerntal-Impression). Alle übrigen
  * Manifest-Bilder stammen von FREMDEN Plätzen (camping.info „ähnliche Plätze") oder sind
- * Lagekarten → verworfen. Darum bewusst schlanker Aufbau: starkes Hero + Breather, die
- * bildlastigen Sektionen (Pillars/CampingFeatures/Galerie) blenden sich ehrlich aus.
+ * Lagekarten → verworfen. Das einzige verbleibende Eigenfoto (Tauerntal-Impression) liegt
+ * unter der Mindestauflösung (520x323, tooSmall) → für ein Full-Bleed-Breather zu klein und
+ * darum ebenfalls verworfen (keine größere herkunftssichere Alternative vorhanden; das Hero
+ * doppelt zu verwenden wäre ein Duplikat). Darum bewusst schlanker Aufbau: starkes Hero, die
+ * bildlastigen Sektionen (Breather/Pillars/CampingFeatures/Galerie) blenden sich ehrlich aus.
  */
 const IMG = "/campsites/campingedengarten";
 
@@ -58,10 +61,7 @@ const campingedengarten: CampsiteConfig = {
     aerial: { src: `${IMG}/hero-edengarten.webp`, alt: "Camping Edengarten mit Bergkulisse der Hohen Tauern in Matrei in Osttirol" },
   },
 
-  breather: {
-    image: { src: `${IMG}/breather-tauerntal.webp`, alt: "Gebirgsbach mit herbstlichen Lärchen im Nationalpark Hohe Tauern bei Matrei" },
-    line: "Mitten im größten Nationalpark der Alpen.",
-  },
+  // Einziges Eigenfoto (Tauerntal) unter Mindestauflösung → kein Breather (Sektion blendet sich aus).
 
   // Keine herkunftssicheren Platz-/Sanitärfotos übrig → Features leer (Sektion aus).
   camping: {
