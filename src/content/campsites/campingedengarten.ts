@@ -58,7 +58,7 @@ const campingedengarten: CampsiteConfig = {
   awards: [],
 
   hero: {
-    aerial: { src: `${IMG}/hero-edengarten.webp`, alt: "Camping Edengarten mit Bergkulisse der Hohen Tauern in Matrei in Osttirol" },
+    aerial: { src: `${IMG}/hero-edengarten.webp`, alt: "Empfangsgebäude und Spielbereich des Camping Edengarten mit Bergblick auf die Hohen Tauern in Matrei in Osttirol" },
   },
 
   // Einziges Eigenfoto (Tauerntal) unter Mindestauflösung → kein Breather (Sektion blendet sich aus).
